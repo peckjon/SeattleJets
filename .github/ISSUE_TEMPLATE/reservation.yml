@@ -1,62 +1,76 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
-assignees:
-  - octocat
+name: Hot Tub Reservation
+description: Reserve a hot tub today!
+title: "Reservation Request: Hot Tub"
+labels: ["request"]
+assignees: [peckjon]
 body:
+  - type: input
+    id: name
+    attributes:
+      label: Your Name
+    validations:
+      required: true
+  - type: input
+    id: phone
+    attributes:
+      label: Phone number (used for questions and for day-of contact)
+      placeholder: 206-555-1212
+    validations:
+      required: true
+  - type: input
+    id: email
+    attributes:
+      label: Email (used for reservation details and payment)
+      placeholder: email@example.com
+    validations:
+      required: true
+  - type: dropdown
+    id: size
+    attributes:
+      label: Hot Tub Size
+      #description:
+      options:
+        - Small (2-4 people): $100/day, $300/wk
+        - Medium (4-8 people): $125/day, $375/wk
+        - Large (-12 people): $150/day, $450/wk
+    validations:
+      required: true
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
+        Outside delivery and pickup is included with all hot tub rentals. An adult (18+) must be present during dropoff and pickup.
+  - type: checkboxes
+    id: addon
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
-    validations:
-      required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: Add-ons
+      description: Optional upgrades:
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
+        - label: Set it up for me: a technician will set up and fill the tub (+$25)
+        - label: Break it down for me: a technician will set up and fill the tub (+$25)
+        - label: Inside delivery and pickup: not more than 2 flights of stairs (+$25)
   - type: textarea
-    id: logs
+    id: info
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+      label: Reservation details
+      description: Is there anything specific we should know about the location or event?
+      #placeholder:
+      #value:
+      #render: shell
   - type: checkboxes
     id: terms
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      label: Reservation Policies
+      description: I have reviewed and agree to follow the [reservation policies](README.md)
       options:
-        - label: I agree to follow this project's Code of Conduct
+        - label: An adult (18+) will be present for dropoff an pickup
+          required: true
+        - label: A clean water source and drainage area (lawn or drain) will be made available
+          required: true
+        - label: The installation area is water-safe; the company is not responsible for any water damage
+          required: true
+        - label: I am responsible for the safety of all gests allowed in or near the hot tub
+          required: true
+        - label: I will not allow the hot tub to be used by anyone who is drunk/intoxicated, under the age of 12, or unable to swim
+          required: true
+        - label: I will be held liable for any damage to the hot tub up to $2000, held on my payment method, and will keep glass and sharp objects away from the tub
           required: true
