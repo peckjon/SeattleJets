@@ -38,7 +38,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Outside delivery and pickup is included with all hot tub rentals. An adult (18+) must be present during dropoff and pickup.
+        Outside delivery and pickup is included with all hot tub rentals. An adult (18+) must be present during dropoff and pickup. Tub is delivered uninflated and unfilled, and must be returned drained, deflated, and folded.
   - type: checkboxes
     id: addon
     attributes:
@@ -46,7 +46,7 @@ body:
       description: "Optional upgrades:"
       options:
         - label: "Set it up for me: a technician will set up and fill the tub (+$25)"
-        - label: "Break it down for me: a technician will set up and fill the tub (+$25)"
+        - label: "Break it down for me: a technician will drain and re-pack the tub (+$25)"
         - label: "Inside delivery and pickup: not more than 2 flights of stairs (+$25)"
   - type: textarea
     id: info
