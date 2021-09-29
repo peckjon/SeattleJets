@@ -30,9 +30,9 @@ body:
       label: Hot Tub Size
       #description:
       options:
-        - Small (2-4 people): $100/day, $300/wk
-        - Medium (4-8 people): $125/day, $375/wk
-        - Large (-12 people): $150/day, $450/wk
+        - "Small (2-4 people): $100/day, $300/wk"
+        - "Medium (4-8 people): $125/day, $375/wk"
+        - "Large (-12 people): $150/day, $450/wk"
     validations:
       required: true
   - type: markdown
