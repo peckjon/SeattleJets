@@ -60,7 +60,7 @@ body:
     id: terms
     attributes:
       label: Reservation Policies
-      description: I have reviewed and agree to follow the [reservation policies](README.md)
+      description: I have reviewed and agree to follow the <a href="https://github.com/peckjon/SeattleJets/tree/main#reservation-policies" target="_blank">reservation policies</a>
       options:
         - label: An adult (18+) will be present for dropoff an pickup
           required: true
@@ -68,7 +68,7 @@ body:
           required: true
         - label: The installation area is water-safe; the company is not responsible for any water damage
           required: true
-        - label: I am responsible for the safety of all gests allowed in or near the hot tub
+        - label: I am responsible for the safety of all guests allowed in or near the hot tub
           required: true
         - label: I will not allow the hot tub to be used by anyone who is drunk/intoxicated, under the age of 12, or unable to swim
           required: true
