@@ -43,7 +43,7 @@ body:
     id: addon
     attributes:
       label: Add-ons
-      description: Optional upgrades:
+      description: "Optional upgrades:"
       options:
         - label: Set it up for me: a technician will set up and fill the tub (+$25)
         - label: Break it down for me: a technician will set up and fill the tub (+$25)
